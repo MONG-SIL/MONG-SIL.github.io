@@ -1,20 +1,19 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://sylhare.github.io"
-title: "Sylhare's blog"
-description: "Well, here it is"
+url: "https://sinbox0701.github.io"
+title: "Junghwan's blog"
+description: "Team Websolute"
 
 # THEME-SPECIFIC CONFIGURATION
 # Meta
-avatar: assets/img/rocket-icon.png
+avatar: assets/img/avatars/websolute_square.jpg
 color_image: /assets/img/lineart.png # In post when you set color
 favicon: assets/favicon.ico
 
 # Header and footer text
-header_text: Well here it is.
-header_feature_image: assets/img/pexels/circuit.jpeg
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a></br>copyright <a href="https://github.com/sylhare">sylhare</a> © 👨‍💻
+header_text: Pave the way Websolute!
+header_feature_image: assets/img/pexels/CoreValue.jpg
+footer_text: Copyright 2020
 
 # Blog
 excerpt: truncate
