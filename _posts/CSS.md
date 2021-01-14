@@ -1,0 +1,104 @@
+---
+layout: post
+title: CSS 정리
+color: rgb(242,85,44)
+tags: [websolute,team]
+---
+
+## CSS
+CSS는 HTML에서 디자인의 역할을 분리했다고 생각하면 편하다.
+디자인을 주 목적으로 다루기 위한 HTML과는 완전히 다른 언어.
+
+## tag 추가
+태그에는 화면 전체를 쓰는 태그와 (줄바꿈이 자동으로 되는 태그 .ex h1) 전체를 쓰지 않는 태그가 있는데 전자를 block level element, 후자를 inline element라고 부른다.
+이는 display 라는 속성을 이용해 변경 할 수 있다.
+block -> inline = display: inline;
+
+inline ->block = display: block;
+
+## CSS 기본 문법
+
+CSS는 스타일이라는 태그를 이용해 구분해주거나, 속성을 이용해 구분해 작성한다..
+
+1. 스타일 태그를 이용해 작성하는 방법
+<style> 
+    선택자{ 효과; } 
+</style> 
+형식으로 사용한다.
+
+-선택자 우선순위 tag < class < id
+-선택자는 어떤 곳에 효과를 원하는지 선택하고, 선택된 곳에 효과를 지정한다.
+-효과 뒤의 ;는 줄을 나눠 효과를 구분해주는 역할을 한다.
+-선택자 자리에는 ,를 사용하여 선택자를 여러 개 사용 할 수 있다.
+
+2. 속성을 이용해 작성하는 방법
+
+<디자인을 원하는 태그> style=" 효과 " </태그>
+-style="" 부분은 HTML의 속성, "" 안의 효과는 CSS의 효과이다
+
+**중복되어 효과가 적용되는 경우에는 뒤쪽에 사용한 코드가 적용된다.
+
+##  class 속성
+class 부여 방법
+class="이름" 
+클래스를 부여한 뒤 클래스를 선택자로 사용해 CSS의 효과 적용가능
+
+클래스는 중복 적용이 가능하다. 
+즉 class="몽실 까미"식으로 띄어쓰기로 클래스를 구분하고, 이 경우에는 두 개의 클래스를 동시에 가지게 된다.
+
+class 선택자 형식
+<style> 
+    .class이름{ 효과; } 
+</style> 
+
+
+## id 속성
+id는 class 보다 높은 우선순위를 가진다.
+즉 중복되어 효과가 적용되는 경우에도 id가 적용된다.
+id 는 중복되어선 안된다. 
+id 부여 방법
+id="이름"
+
+id 선택자 형식
+<style> 
+    #id이름{ 효과; } 
+</style> 
+
+
+## CSS box model
+박스 모델은 4가지 요소로 구성돼있다.
+border(테두리 선), padding(선과 내용 사이 간격) , margin(테두리 사이의 간격), content
+
+<img>https://th.bing.com/th/id/OIP.f-NKovus6HS_C6p62pYKIgHaGQ?pid=Api&rs=1
+
+박스모델 코드 형식 
+선택자{
+    border:5px; solid, red
+    padding:20px;
+    margin:20px;
+}
+
+## GRID
+여러 내용을 하나로 묶어 표현하고 싶을 때 사용하는 것.
+display의 형태중 하나이다.
+
+코드 형태
+<style>
+    #grid{
+        display: grid;
+        grid-tempate-columns: 1fr 1fr;
+    }
+</style>
+-fr은 가로 화면 분할 비율이다 위 예시에서는 1:1 분할이다. 
+
+
+
+
+
+
+## CSS 효과(property) 정리
+>색상 변경 color : red;
+>글자 밑줄 없애기 text-decoration : none;
+>글자 크기 변경 font-size: 100%; or font-size 40px;
+>글자 가운데 , 좌우 정렬 text-aline: center or left or right
+>
