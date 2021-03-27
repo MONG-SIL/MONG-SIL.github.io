@@ -202,3 +202,4 @@ p_list.sort() #부문자열을 담은 리스트를 알파벳 순서대로 정렬
 
 for c in range(len(p_list)): # plist 원소 수만큼 반복
 	print(p_list[c], end=' ') # 줄바꿈 없이 원소 출력
+
