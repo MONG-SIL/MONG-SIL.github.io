@@ -1,0 +1,159 @@
+과제 1
+
+class Calculator:  #calculator1.py에 들어갈 내용
+	def __init__(self, num = 0, memory = 0): # 함수 초기화 
+		self.num = num # 시작 현재값은 0
+		self.memory = memory # 시작 메모리 값은 0
+		
+	def setValue(self, x): # x를 입력받고 현재값을 x로 바꾼다
+		self.num = x
+	
+	def getValue(self): # 현재값을 반환한다.
+		return self.num
+	
+	def add(self, num): # 현재값에 입력받은 num만큼을 더한다
+		self.num += num
+		return self.num
+	
+	def sub(self, num): # 현재값에 입력받은 num만큼을 뺀다
+		self.num -= num
+		return self.num
+	
+	def mpy(self, num): # 현재값에 입력받은 num을 곱해 현재값으로 반환한다.
+		self.num = self.num * num
+		return self.num
+	
+	def div(self, num): # 현재값에 입력받은 num만큼을 나누고 그 몫을 정수형으로 반환한다.
+		self.num = self.num // num
+		return self.num
+	
+	def mod(self, num): # 현재값에 입력받은 num으로 나눈 나머지를 반환한다.
+		self.num = self.num % num
+		return self.num
+
+	def clear(self): # 현재값을 0으로 초기화한다.
+		self.num = 0
+		return self.num
+
+from calculator1 import Calculator
+cal = Calculator()
+
+while True:
+	command = input().split() # 띄어쓰기로 구분하여 명령과 값 입력받기 command[0]이 명령어, command[1]이 값
+	if command[0] == 'setValue': #setValue 명령인 경우, 
+		cal.setValue(int(command[1])) #클래스의 setValue명령어를 command[1]의 정수형 값으로 실행 
+	elif command[0] == 'add':
+		cal.add(int(command[1])) #클래스의 add명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'sub':
+		cal.sub(int(command[1])) #클래스의 sub명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'mpy':
+		cal.mpy(int(command[1])) #클래스의 mpy명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'div':
+		cal.div(int(command[1])) #클래스의 div명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'mod':
+		cal.mod(int(command[1])) #클래스의 mod명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] =='clear': #clear를 입력받았으면 현재값을 다 지운다
+		cal.clear()
+	elif command[0] == 'currentValue': # 현재 값 출력
+		print(cal.getValue())
+	elif command[0] == 'quit': # 계산기 종료
+		break
+
+
+
+
+class Calculator:  #calculator2.py에 들어갈 내용
+	def __init__(self, num = 0, memory = 0): # 함수 초기화 
+		self.num = num # 시작 현재값은 0
+		self.memory = memory # 시작 메모리 값은 0
+		
+	def setValue(self, x): # x를 입력받고 현재값을 x로 바꾼다
+		self.num = x
+	
+	def getValue(self): # 현재값을 반환한다.
+		return self.num
+	
+	def add(self, num): # 현재값에 입력받은 num만큼을 더한다
+		self.num += num
+		return self.num
+	
+	def sub(self, num): # 현재값에 입력받은 num만큼을 뺀다
+		self.num -= num
+		return self.num
+	
+	def mpy(self, num): # 현재값에 입력받은 num을 곱해 현재값으로 반환한다.
+		self.num = self.num * num
+		return self.num
+	
+	def div(self, num): # 현재값에 입력받은 num만큼을 나누고 그 몫을 정수형으로 반환한다.
+		self.num = self.num // num
+		return self.num
+	
+	def mod(self, num): # 현재값에 입력받은 num으로 나눈 나머지를 반환한다.
+		self.num = self.num % num
+		return self.num
+	
+	def changeSign(self): # 현재 값에서 -1을 곱해 부호를 바꾼다.
+		self.num = (-1) * self.num
+		return self.num
+		
+	def clear(self): # 현재값을 0으로 초기화한다.
+		self.num = 0
+		return self.num
+		 
+	def memorySave(self): # 메모리에 현재값을 저장한다.
+		self.memory = self.num
+		return self.memory
+	
+	def memoryRead(self): # 현재값에 메모리에 있는 값을 저장한다.
+		self.num = self.memory
+		return self.num
+		
+	def memoryClear(self, num = 0): # 메모리 값을 0으로 초기화한다.
+		self.memory = num
+		return self.memory
+	
+	def memoryAdd(self): # 메모리 값에 현재 값을 더하여 저장한다.
+		self.memory += self.num
+		return self.memory
+	
+	def memorySub(self): # 메모리 값에 현재 값을 빼서 저장한다.
+		self.memory -= self.num
+		return self.memory
+	
+from calculator2 import Calculator
+cal = Calculator()
+
+
+while True:
+	command = input().split() # 띄어쓰기로 구분하여 명령과 값 입력받기 command[0]이 명령어, command[1]이 값
+	if command[0] == 'setValue': #setValue 명령인 경우, 
+		cal.setValue(int(command[1])) #클래스의 setValue명령어를 command[1]의 정수형 값으로 실행 
+	elif command[0] == 'add':
+		cal.add(int(command[1])) #클래스의 add명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'sub':
+		cal.sub(int(command[1])) #클래스의 sub명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'mpy':
+		cal.mpy(int(command[1])) #클래스의 mpy명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'div':
+		cal.div(int(command[1])) #클래스의 div명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'mod':
+		cal.mod(int(command[1])) #클래스의 mod명령어를 command[1]의 정수형 값으로 실행
+	elif command[0] == 'cs':
+		cal.changeSign()
+	elif command[0] =='clear': #clear를 입력받았으면 현재값을 다 지운다
+		cal.clear()
+	elif command[0] == 'MS': # MS를 입력받으면 메모리에 현재 값 저장
+		cal.memorySave()
+	elif command[0] == 'MR': # MR를 입력받으면 현재 값에 메모리 값 저장
+		cal.memoryRead()
+	elif command[0] == 'M+': # M+를 입력받으면 메모리에 현재 값을 더한 값 저장
+		cal.memoryAdd()
+	elif command[0] == 'M-': # M-를 입력받으면 메모리에 현재 값을 뺀 값 저장
+		cal.memorySub()
+	elif command[0] == 'MC':# MC를 입력받으면 메모리 0으로 초기화
+		cal.memoryClear()
+	elif command[0] == 'currentValue': # 현재 값 출력
+		print(cal.getValue())
+	elif command[0] == 'quit': # 계산기 종료
+		break
